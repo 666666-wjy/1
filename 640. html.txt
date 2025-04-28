@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New Year Countdown</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            font-size: 2em;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="countdown"></div>
+
+    
+</body>
+</html>
