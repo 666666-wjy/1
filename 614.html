@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>二次方程求解器</title>
+</head>
+<body>
+    <script>
+        const a = prompt("请输入系数a（必须大于0）：");
+        const b = prompt("请输入系数b：");
+        const c = prompt("请输入系数c：");
+        const numA = parseFloat(a);
+        const numB = parseFloat(b);
+        const numC = parseFloat(c);
+        if (isNaN(numA) || isNaN(numB) || isNaN(numC)) {
+            alert("错误：请输入有效的数字！");
+        } else if (numA <= 0) {
+            alert("错误：系数a必须大于0！");
+        } else {
+            const delta = numB ** 2 - 4 * numA * numC;
+            if (delta < 0) {
+                alert("警告：判别式小于0，无实数根！");
+            } else {
+                const sqrtDelta = Math.sqrt(delta);
+                const x1 = (-numB + sqrtDelta) / (2 * numA);
+                const x2 = (-numB - sqrtDelta) / (2 * numA);
+                alert(`方程的实数根为：\n x1 = ${x1.toFixed(2)}\n x2 = ${x2.toFixed(2)}`);
+                console.log("------------------------");
+                console.log(`a = ${numA}, b = ${numB}, c = ${numC}`);
+                console.log(`判别式Δ = ${delta}`);
+                console.log(`根1：x1 = ${x1.toFixed(2)}`);
+                console.log(`根2：x2 = ${x2.toFixed(2)}`);
+                console.log("------------------------");
+            }
+        }
+    </script>
+</body>
+</html>
